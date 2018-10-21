@@ -3,17 +3,18 @@ import { StyleSheet, View } from "react-native";
 import Logo from "./componentes/Logo";
 import { general } from "./styles/styles";
 import If from "./componentes/If";
-import { Inverter } from "./componentes/Multi";
+import { Inverter, Random } from "./componentes/Multi";
 
-type Props = {};
-
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+      <View style={styles.section}>
         <Logo texto="Logo" />
         <If numero={32} />
         <Inverter texto="React Native" />
+        <Random numeros={9}/>
+        </View>
       </View>
     );
   }

@@ -5,7 +5,9 @@ import fonts from "./fonts";
 const general = {
   container: {
     flex: 1,
-    backgroundColor: colors.background
+    backgroundColor: colors.background,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   section: {
     margin: metrics.doubleBaseMargin
