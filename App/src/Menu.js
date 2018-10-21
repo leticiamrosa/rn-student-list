@@ -7,8 +7,12 @@ import Contador from './componentes/Contador';
 import { Inverter, Random } from "./componentes/Multi";
 import ValidarProps from './componentes/ValidasProps';
 import Evento from './componentes/Evento';
+import { Avo } from './componentes/ComunicacaoDireta';
 
 export default createDrawerNavigator({
+    Avo: {
+        screen: () => <Avo nome="Joao" sobrenome="Silva"/>
+    },
     Evento: {
         screen: Evento,
     },
