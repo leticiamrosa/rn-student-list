@@ -1,9 +1,12 @@
 import React from 'react';
 import { Text } from 'react-native';
+import { general } from '../styles/styles';
+
+const { sectionText } = general;
 
 export const Inverter = props => {
   const inv = props.texto.split('').reverse().join('')
-  return <Text>{inv}</Text>
+  return <Text style={sectionText}>{inv}</Text>
 }
 
 export const Random = props => {
@@ -19,7 +22,7 @@ export const Random = props => {
   }
 
   numeros.sort((a,b) => a - b)
-  return <Text>{numeros.join(', ')}</Text>
+  return <Text style={sectionText}>{numeros.join(', ')}</Text>
 }
 
 export default Inverter

@@ -2,22 +2,33 @@ import React from 'react';
 import { createDrawerNavigator } from 'react-navigation';
 
 import Logo from "./componentes/Logo";
-import { general } from "./styles/styles";
 import If from "./componentes/If";
+import Contador from './componentes/Contador';
 import { Inverter, Random } from "./componentes/Multi";
+import ValidarProps from './componentes/ValidasProps';
+import Evento from './componentes/Evento';
 
 export default createDrawerNavigator({
+    Evento: {
+        screen: Evento,
+    },
+    ValidarProps: {
+        screen: () => <ValidarProps ano={18}/>
+    },
+    Contador: {
+        screen: () => <Contador numeroInicial={10}/>
+    },
     Random: {
         screen: () => <Random numeros={8}/>,
         navigationOptions: { title: 'Mega Sena'}
     },
     Inverter: {
-        screen: () => <Inverter text='react native'/>
+        screen: () => <Inverter texto="React Native" />
     },
     If: {
         screen: () => <If numero={30}/>
     },
     Logo: {
-        screen: () => <Simples texto="React Native"/>
+        screen: () => <Logo texto="Logo" />
     }
 }, {drawerWidth: 300})

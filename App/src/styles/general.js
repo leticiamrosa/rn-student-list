@@ -7,17 +7,28 @@ const general = {
     flex: 1,
     backgroundColor: colors.background,
     justifyContent: 'center',
-    alignItems: 'center',
   },
   section: {
-    margin: metrics.doubleBaseMargin
+    margin: metrics.doubleBaseMargin,
   },
   sectionTitle: {
-    color: colors.text,
+    color: colors.primary,
     fontWeight: "bold",
-    fontSize: fonts.regular,
+    fontSize: fonts.title,
     alignSelf: "center",
     marginBottom: metrics.doubleBaseMargin
+  },
+  sectionText: {
+    color: colors.text,
+    fontSize: fonts.regular,
+  },
+  input: {
+    height: 50,
+    fontSize: fonts.input,
+    borderColor: colors.primary,
+    borderWidth: 1,
+    elevation: 1,
+    paddingLeft: 5,
   }
 };
 
